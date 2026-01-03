@@ -1,6 +1,6 @@
 /* ==========================================
-   SALVA CLIENTS - Professional Veterinary Services
-   Color Palette: Forest Green & Warm Red
+   SALVA CLIENTS - Serviços Veterinários Profissionais
+   Paleta de Cores: Verde Floresta & Vermelho Quente
    ========================================== */
 
 :root {
@@ -44,7 +44,7 @@
 }
 
 /* ==========================================
-   RESET & BASE STYLES
+   REDEFINIÇÃO & ESTILOS BASE
    ========================================== */
 
 * {
@@ -82,7 +82,7 @@ a:hover {
 }
 
 /* ==========================================
-   NAVIGATION
+   NAVEGAÇÃO
    ========================================== */
 
 .navbar {
@@ -273,7 +273,7 @@ a:hover {
 }
 
 /* ==========================================
-   BUTTONS
+   BOTÕES
    ========================================== */
 
 .btn {

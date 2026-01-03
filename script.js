@@ -1,5 +1,5 @@
 // ==========================================
-// SALVA CLIENTS - Interactive JavaScript
+// SALVA CLIENTS - JavaScript Interativo
 // ==========================================
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ==========================================
-// NAVIGATION FUNCTIONALITY
+// FUNCIONALIDADE DE NAVEGAÇÃO
 // ==========================================
 
 function initNavigation() {
@@ -18,13 +18,13 @@ function initNavigation() {
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    // Toggle mobile menu
+    // Alterna o menu móvel
     hamburger.addEventListener('click', function() {
         navMenu.classList.toggle('active');
         hamburger.classList.toggle('active');
     });
 
-    // Close menu when link is clicked
+    // Fecha o menu quando o link é clicado
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             navMenu.classList.remove('active');
@@ -32,7 +32,7 @@ function initNavigation() {
         });
     });
 
-    // Close menu when clicking outside
+    // Fecha o menu ao clicar fora
     document.addEventListener('click', function(event) {
         const isClickInsideNav = navMenu.contains(event.target);
         const isClickOnHamburger = hamburger.contains(event.target);
@@ -45,7 +45,7 @@ function initNavigation() {
 }
 
 // ==========================================
-// SMOOTH SCROLL FOR ANCHOR LINKS
+// ROLAGEM SUAVE PARA LINKS DE ÂNCORA
 // ==========================================
 
 function initSmoothScroll() {
@@ -54,7 +54,7 @@ function initSmoothScroll() {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+                const offsetTop = target.offsetTop - 80; // Conta com a navbar fixa
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
@@ -65,7 +65,7 @@ function initSmoothScroll() {
 }
 
 // ==========================================
-// SCROLL ANIMATIONS
+// ANIMAÇÕES DE ROLAGEM
 // ==========================================
 
 function initScrollAnimations() {
@@ -83,7 +83,7 @@ function initScrollAnimations() {
         });
     }, observerOptions);
 
-    // Observe all elements that need animation
+    // Observa todos os elementos que precisam de animação
     const animateElements = document.querySelectorAll(
         '.service-card, .feature-item, .info-card'
     );
@@ -94,7 +94,7 @@ function initScrollAnimations() {
 }
 
 // ==========================================
-// FORM HANDLING
+// MANIPULAÇÃO DE FORMULÁRIO
 // ==========================================
 
 function initFormHandling() {
@@ -112,20 +112,20 @@ function initFormHandling() {
 
             // Validate form
             if (!validateForm(name, email, pet, message)) {
-                showNotification('Please fill in all fields correctly', 'error');
+                showNotification('Por favor, preencha todos os campos corretamente', 'error');
                 return;
             }
 
             // Show loading state
             const submitBtn = form.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
+            submitBtn.textContent = 'Enviando...';
             submitBtn.disabled = true;
 
             // Simulate form submission (replace with actual endpoint)
             setTimeout(() => {
                 // Success notification
-                showNotification('Thank you! We\'ll contact you within 1 hour.', 'success');
+                showNotification('Obrigado! Entraremos em contato em até 1 hora.', 'success');
 
                 // Reset form
                 form.reset();
@@ -141,7 +141,7 @@ function initFormHandling() {
 }
 
 // ==========================================
-// FORM VALIDATION
+// VALIDAÇÃO DE FORMULÁRIO
 // ==========================================
 
 function validateForm(name, email, pet, message) {
@@ -170,7 +170,7 @@ function isValidEmail(email) {
 }
 
 // ==========================================
-// NOTIFICATION SYSTEM
+// SISTEMA DE NOTIFICAÇÃO
 // ==========================================
 
 function showNotification(message, type = 'info') {
@@ -256,7 +256,7 @@ function showNotification(message, type = 'info') {
 }
 
 // ==========================================
-// NAVBAR SCROLL EFFECT
+// EFEITO DE ROLAGEM DA NAVBAR
 // ==========================================
 
 let lastScrollY = 0;
@@ -273,7 +273,7 @@ window.addEventListener('scroll', function() {
 });
 
 // ==========================================
-// COUNTER ANIMATION (for Why Us section)
+// ANIMAÇÃO DE CONTADOR (para seção Por Que Nós)
 // ==========================================
 
 function animateCounters() {
@@ -298,7 +298,7 @@ function animateCounters() {
     });
 }
 
-// Trigger counter animation when section is in view
+// Ativa animação de contador quando a seção está visível
 const whyUsSection = document.getElementById('why-us');
 if (whyUsSection) {
     const observer = new IntersectionObserver(entries => {
@@ -313,11 +313,11 @@ if (whyUsSection) {
 }
 
 // ==========================================
-// ACCESSIBILITY: KEYBOARD NAVIGATION
+// ACESSIBILIDADE: NAVEGAÇÃO POR TECLADO
 // ==========================================
 
 document.addEventListener('keydown', function(event) {
-    // Press 'E' to call emergency number
+    // Pressione 'E' para ligar para número de emergência
     if (event.key === 'e' || event.key === 'E') {
         const telLink = document.querySelector('a[href^="tel:"]');
         if (telLink) {
@@ -325,7 +325,7 @@ document.addEventListener('keydown', function(event) {
         }
     }
 
-    // Press 'C' to go to contact
+    // Pressione 'C' para ir para contato
     if (event.key === 'c' || event.key === 'C') {
         const contactSection = document.getElementById('contact');
         if (contactSection) {
@@ -335,7 +335,7 @@ document.addEventListener('keydown', function(event) {
 });
 
 // ==========================================
-// DYNAMIC YEAR IN FOOTER
+// ANO DINÂMICO NO RODAPÉ
 // ==========================================
 
 const yearElement = document.querySelector('.footer-bottom');
@@ -345,7 +345,7 @@ if (yearElement && yearElement.textContent.includes('2026')) {
 }
 
 // ==========================================
-// LAZY LOADING FOR IMAGES (if added later)
+// CARREGAMENTO LENTO PARA IMAGENS (se adicionadas depois)
 // ==========================================
 
 function initLazyLoading() {
@@ -369,9 +369,9 @@ function initLazyLoading() {
 initLazyLoading();
 
 // ==========================================
-// CONSOLE GREETING
+// SAUDAÇÃO DO CONSOLE
 // ==========================================
 
-console.log('%cWelcome to Salva Clients!', 'color: #1B4332; font-size: 24px; font-weight: bold;');
-console.log('%cProfessional Veterinary Emergency Services', 'color: #DC2626; font-size: 14px;');
-console.log('%cAvailable 24/7 | Call: +1 (234) 567-8900', 'color: #2D6A4F; font-size: 12px;');
+console.log('%cBem-vindo a Salva Clients!', 'color: #1B4332; font-size: 24px; font-weight: bold;');
+console.log('%cServiços Profissionais de Emergência Veterinária', 'color: #DC2626; font-size: 14px;');
+console.log('%cDisponível 24/7 | Ligue: +1 (234) 567-8900', 'color: #2D6A4F; font-size: 12px;');
